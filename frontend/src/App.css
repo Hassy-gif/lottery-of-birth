@@ -1,0 +1,30 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #0b0b12; color: #f2f2f5; font-family: -apple-system, system-ui, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 48px 20px 80px; }
+h1 { font-size: clamp(2.2rem, 7vw, 3.6rem); margin: 0 0 16px; letter-spacing: -0.02em; }
+h2 { font-size: 1.8rem; margin: 8px 0; }
+p { font-size: 1.1rem; line-height: 1.6; }
+.muted { color: #9a9aab; }
+.intro { text-align: center; padding-top: 12vh; }
+button { background: #f5c542; color: #111; border: 0; border-radius: 999px; padding: 16px 36px;
+  font-size: 1.1rem; font-weight: 700; cursor: pointer; margin-top: 16px; transition: transform .15s; }
+button:hover { transform: scale(1.05); }
+button.secondary { background: transparent; color: #f2f2f5; border: 1px solid #44445a; }
+.rolling { text-align: center; padding-top: 25vh; }
+.globe { font-size: 5rem; animation: spin 1s linear infinite; display: inline-block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.reveal { text-align: center; animation: fade .8s ease; }
+.flag { font-size: 6rem; line-height: 1; }
+.timeline { list-style: none; padding: 0; margin: 32px 0; border-left: 2px solid #2a2a3a; }
+.timeline li { padding: 12px 0 12px 20px; position: relative; animation: fade .6s ease; display: flex; flex-direction: column; gap: 4px; }
+.timeline li::before { content: ""; position: absolute; left: -7px; top: 18px; width: 12px; height: 12px; border-radius: 50%; background: #6b6b80; }
+.timeline li.good::before { background: #3ecf8e; }
+.timeline li.bad::before { background: #ff5c6c; }
+.age { font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: #9a9aab; }
+table { width: 100%; border-collapse: collapse; margin: 24px 0; animation: fade .8s ease; }
+th, td { padding: 10px 8px; text-align: left; border-bottom: 1px solid #22222f; font-size: .95rem; }
+th { color: #f5c542; }
+.actions { display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.source { font-size: .8rem; color: #6b6b80; text-align: center; margin-top: 24px; }
+.error { color: #ff5c6c; }
+@keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
